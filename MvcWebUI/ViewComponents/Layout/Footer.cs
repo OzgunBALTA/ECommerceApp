@@ -4,7 +4,7 @@ namespace MvcWebUI.ViewComponents.Layout
 {
     public class Footer : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             return View();
         }

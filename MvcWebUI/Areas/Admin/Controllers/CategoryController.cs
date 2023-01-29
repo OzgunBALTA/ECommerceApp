@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MvcWebUI.ApiServices.Abstract;
-using MvcWebUI.ApiServices.Concrete;
 using MvcWebUI.Models;
-using Newtonsoft.Json;
-using System.Net.Http;
 
 namespace MvcWebUI.Areas.Admin.Controllers
 {
