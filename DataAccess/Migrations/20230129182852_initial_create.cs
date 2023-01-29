@@ -2,6 +2,8 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace DataAccess.Migrations
 {
     /// <inheritdoc />
@@ -45,6 +47,41 @@ namespace DataAccess.Migrations
                         principalTable: "Categories",
                         principalColumn: "CategoryId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryId", "CategoryName", "Status" },
+                values: new object[,]
+                {
+                    { 1, "Bilgisayar", true },
+                    { 2, "Telefon", true },
+                    { 3, "Tablet", true },
+                    { 4, "Televizyon", true }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "ProductId", "CategoryId", "ProductName", "Status", "UnitPrice", "UnitsInStock" },
+                values: new object[,]
+                {
+                    { 1, 1, "HP Laptop", true, 17000m, 50 },
+                    { 2, 1, "Msi Laptop", true, 25000m, 45 },
+                    { 3, 2, "Samsung S22", true, 15500m, 30 },
+                    { 4, 2, "IPhone 14 Pro", true, 32000m, 18 },
+                    { 5, 2, "Oppo Reno", true, 4000m, 9 },
+                    { 6, 3, "Huawei Tablet", true, 3800m, 11 },
+                    { 7, 2, "IPad Pro", true, 24000m, 9 },
+                    { 8, 4, "LG Ultra TV", true, 43800m, 11 },
+                    { 9, 4, "Philips 4K TV", true, 34000m, 9 },
+                    { 11, 4, "Samsung Led TV", true, 35000m, 11 },
+                    { 12, 4, "Arçelik HD TV", true, 23800m, 11 },
+                    { 13, 4, "Beko HD TV", true, 32200m, 9 },
+                    { 14, 4, "Asus Oled TV", true, 30300m, 11 },
+                    { 15, 4, "Sony HD TV", true, 29200m, 9 },
+                    { 16, 4, "Vestel Oled TV", true, 20300m, 11 },
+                    { 17, 4, "TCL UHD TV", true, 34200m, 14 },
+                    { 18, 4, "Grundig Led TV", true, 24600m, 11 }
                 });
 
             migrationBuilder.CreateIndex(

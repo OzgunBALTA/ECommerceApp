@@ -1,5 +1,7 @@
-﻿using Entities.Concrete;
+﻿using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace DataAccess.Concrete.Context
 {
@@ -15,6 +17,9 @@ namespace DataAccess.Concrete.Context
             modelBuilder.Entity<Product>().HasKey(x => x.ProductId);
             modelBuilder.Entity<Category>().HasKey(x => x.CategoryId);
             modelBuilder.Entity<Product>().Property(x => x.UnitPrice).HasPrecision(14, 2);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.Seed();
         }
 
         public DbSet<Category> Categories { get; set; }
