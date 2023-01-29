@@ -1,0 +1,39 @@
+﻿@model MvcWebUI.Models.CategoryModel
+
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Admin">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/Admin/Category/Index">Kategoriler</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Kategori Düzenle</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    @Html.Label("Kategori ID")
+    @Html.TextBoxFor(x => x.CategoryId, new {@class = "form-control", @readonly = "true"})
+    <br />
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CategoryName, new {@class = "form-control"})
+    <br />
+    @Html.Label("Kategori Durumu")
+    @Html.TextBoxFor(x => x.Status, new {@class = "form-control", @readonly = "true"})
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+}
+

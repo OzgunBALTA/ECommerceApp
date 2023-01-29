@@ -1,0 +1,44 @@
+﻿@model MvcWebUI.Models.ProductModel
+
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Admin">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="/Admin/Product/Index">Ürünler</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Ürün Düzenle</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+@using (Html.BeginForm("UpdateProduct", "Product", FormMethod.Post))
+{
+    @Html.Label("Ürün ID")
+    @Html.TextBoxFor(x => x.ProductId, new {@class = "form-control", @readonly = "true"})
+    <br />
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x => x.ProductName, new {@class = "form-control"})
+    <br />
+    @Html.Label("Kategori ID")
+    @Html.TextBoxFor(x => x.CategoryId, new {@class = "form-control"})
+    <br />
+    @Html.Label("Birim Fiyatı")
+    @Html.TextBoxFor(x => x.UnitPrice, new {@class = "form-control"})
+    <br />
+    @Html.Label("Stok Adedi")
+    @Html.TextBoxFor(x => x.UnitsInStock, new {@class = "form-control"})
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+}
+

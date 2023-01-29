@@ -1,0 +1,117 @@
+﻿@model IEnumerable<MvcWebUI.Models.ProductModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="/Admin">Home</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <strong>Kategoriler</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <input type="text" class="form-control form-control-sm m-b-xs" id="filter"
+                               placeholder="Search in table">
+
+                        <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Ürün Adı</th>
+                                    <th>Kategori ID</th>
+                                    <th>Birim Fiyatı</th>
+                                    <th>Stok Adedi</th>
+                                    <th>Durum</th>
+                                    <th>İşlem</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="gradeX">
+                                        <td>@item.ProductId</td>
+                                        <td>@item.ProductName</td>
+                                        <td>@item.CategoryId</td>
+                                        <td>@item.UnitPrice</td>
+                                        <td>@item.UnitsInStock</td>
+                                        <td>
+                                            <a href="/Admin/Product/ChangeStatus/@item.ProductId" class="btn btn-secondary" id="ChangeBtn"
+                                           onclick="return confirm('Blog durumunu değiştirmek istedğinize emin misiniz?');">
+                                                @(item.Status == true ? "Aktif" : "Pasif")
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="/Admin/Product/UpdateProduct/@item.ProductId" class="btn btn-warning">Update</a>
+                                                <a href="/Admin/Product/DeleteProduct/@item.ProductId" class="btn btn-danger">Delete</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        <ul class="pagination float-right"></ul>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <a class="btn btn-success" href="/Admin/Category/AddCategory">Kategori Ekle</a>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section scripts {
+        <script src="~/Templates/ECommerceTemplate/js/plugins/footable/footable.all.min.js"></script>
+        <script src="~/Templates/ECommerceTemplate/js/inspinia.js"></script>
+        <script src="~/Templates/ECommerceTemplate/js/plugins/pace/pace.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $('.footable').footable();
+                $('.footable2').footable();
+
+            });
+
+        </script>
+    }
+
+</body>
+
+</html>
+
+
