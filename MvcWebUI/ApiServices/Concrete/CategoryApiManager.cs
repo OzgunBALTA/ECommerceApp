@@ -27,7 +27,7 @@ namespace MvcWebUI.ApiServices.Concrete
         {
             var jsonCategory = JsonConvert.SerializeObject(id);
             StringContent content = new StringContent(jsonCategory, Encoding.UTF8, "application/json");
-            await _httpClient.PostAsync($"changestatus/{id}", content); //dene.
+            await _httpClient.PostAsync($"changestatus/{id}", content);
         }
 
         public async Task DeleteAsync(int id)
