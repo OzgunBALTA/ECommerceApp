@@ -12,7 +12,7 @@ function getCategories() {
                 <td>${value.categoryName}</td>
                 <td> 
                      <a href="/Admin/Category/ChangeStatus/${value.categoryId}" class="btn btn-secondary" id="ChangeBtn"
-                     onclick="return confirm('Blog durumunu değiştirmek istedğinize emin misiniz?');">
+                     onclick="return confirm('Kategori durumunu değiştirmek istedğinize emin misiniz?');">
                       ${value.status == true ? "Aktif" : "Pasif"}
                       </a>
                 </td>
