@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ECommerceAppContext))]
-    [Migration("20230202220414_initial_create")]
+    [Migration("20230202221243_initial_create")]
     partial class initialcreate
     {
         /// <inheritdoc />
@@ -236,33 +236,6 @@ namespace DataAccess.Migrations
                             Status = true,
                             UnitPrice = 29200m,
                             UnitsInStock = 9
-                        },
-                        new
-                        {
-                            ProductId = 16,
-                            CategoryId = 4,
-                            ProductName = "Vestel Oled TV",
-                            Status = true,
-                            UnitPrice = 20300m,
-                            UnitsInStock = 11
-                        },
-                        new
-                        {
-                            ProductId = 17,
-                            CategoryId = 4,
-                            ProductName = "TCL UHD TV",
-                            Status = true,
-                            UnitPrice = 34200m,
-                            UnitsInStock = 14
-                        },
-                        new
-                        {
-                            ProductId = 18,
-                            CategoryId = 4,
-                            ProductName = "Grundig Led TV",
-                            Status = true,
-                            UnitPrice = 24600m,
-                            UnitsInStock = 11
                         });
                 });
 

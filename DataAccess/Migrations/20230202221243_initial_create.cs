@@ -79,10 +79,7 @@ namespace DataAccess.Migrations
                     { 12, 4, "Arçelik HD TV", true, 23800m, 11 },
                     { 13, 4, "Beko HD TV", true, 32200m, 9 },
                     { 14, 4, "Asus Oled TV", true, 30300m, 11 },
-                    { 15, 4, "Sony HD TV", true, 29200m, 9 },
-                    { 16, 4, "Vestel Oled TV", true, 20300m, 11 },
-                    { 17, 4, "TCL UHD TV", true, 34200m, 14 },
-                    { 18, 4, "Grundig Led TV", true, 24600m, 11 }
+                    { 15, 4, "Sony HD TV", true, 29200m, 9 }
                 });
 
             migrationBuilder.CreateIndex(

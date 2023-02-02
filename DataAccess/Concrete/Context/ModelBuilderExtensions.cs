@@ -171,33 +171,6 @@ namespace DataAccess.Concrete.EntityFramework
                 UnitsInStock = 9,
                 Status = true
 
-            }, new Product
-            {
-                ProductId = 16,
-                ProductName = "Vestel Oled TV",
-                UnitPrice = 20300,
-                CategoryId = 4,
-                UnitsInStock = 11,
-                Status = true
-
-            }, new Product
-            {
-                ProductId = 17,
-                ProductName = "TCL UHD TV",
-                UnitPrice = 34200,
-                CategoryId = 4,
-                UnitsInStock = 14,
-                Status = true
-
-            }, new Product
-            {
-                ProductId = 18,
-                ProductName = "Grundig Led TV",
-                UnitPrice = 24600,
-                CategoryId = 4,
-                UnitsInStock = 11,
-                Status = true
-
             }
             );
         }
