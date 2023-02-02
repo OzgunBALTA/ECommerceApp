@@ -21,7 +21,7 @@
 <body>
 
     <div id="wrapper">
-        @await Component.InvokeAsync("Sidebar")
+        @await Html.PartialAsync("/Views/Shared/Partials/_Sidebar.cshtml")
         <div id="page-wrapper" class="gray-bg">
             <div class="row border-bottom">
                 @await Component.InvokeAsync("Navbar")

@@ -15,17 +15,25 @@ namespace MvcWebUI.Controllers
             _productApiService = productApiService;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+
+            return View();
+        }
+
+        [Route("getallproducts")]
+        public async Task<IActionResult> GetProducts()
         {
 
             var result = await _productApiService.GetProductsStatusTrue();
-            return View(result);
+            return Json(result);
         }
 
+        [Route("getproductsbycategoryid/{id}")]
         public async Task<IActionResult> GetProductsByCategoryId(int id)
         {
             var result = await _productApiService.GetProductsStatusTrueByCategoryIdAsync(id);
-            return View(result);
+            return Json(result);
         }
     }
 }
