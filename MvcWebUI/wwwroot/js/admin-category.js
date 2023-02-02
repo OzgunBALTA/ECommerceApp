@@ -18,8 +18,8 @@ function getCategories() {
                 </td>
                 <td>
                   <div class="btn-group">
-                  <a href="/Admin/Category/UpdateCategory/${value.categoryId}" class="btn btn-warning">Update</a>
-                  <a href="/Admin/Category/DeleteCategory/${value.categoryId}" class="btn btn-danger">Delete</a>
+                      <a href="/Admin/Category/UpdateCategory/${value.categoryId}" class="btn btn-warning">Update</a>
+                      <a href="/Admin/Category/DeleteCategory/${value.categoryId}" class="btn btn-danger">Delete</a>
                   </div>
                 </td>
              </tr>`);

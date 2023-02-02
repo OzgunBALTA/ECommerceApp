@@ -14,7 +14,7 @@ function fun(id) {
                            <td>${value.productName}</td>
                            <td>${value.unitPrice}</td>
                        </tr>
-                       `);
+            `);
         });
     });
 }
@@ -30,7 +30,7 @@ function getProducts() {
                            <td>${value.productName}</td>
                            <td>${value.unitPrice}</td>
                        </tr>
-                       `);
+            `);
         });
     });
 }
