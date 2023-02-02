@@ -9,12 +9,14 @@ namespace MvcWebUI.ApiServices.Concrete
     {
         private readonly HttpClient _httpClient;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        public IConfiguration Configuration { get; }
 
-        public ProductApiManager(HttpClient httpClient, IHttpContextAccessor httpContextAccessor)
+        public ProductApiManager(HttpClient httpClient, IHttpContextAccessor httpContextAccessor, IConfiguration configuration)
         {
+            Configuration = configuration;
             _httpClient = httpClient;
             _httpContextAccessor = httpContextAccessor;
-            _httpClient.BaseAddress = new Uri("https://localhost:44308/api/Products/");
+            _httpClient.BaseAddress = new Uri($"{Configuration["BaseUrl"]}Products/");       
         }
 
         public async Task AddAsync(ProductModel productModel)

@@ -71,7 +71,7 @@ namespace DataAccess.Migrations
                     { 4, 2, "IPhone 14 Pro", true, 32000m, 18 },
                     { 5, 2, "Oppo Reno", true, 4000m, 9 },
                     { 6, 3, "Huawei Tablet", true, 3800m, 11 },
-                    { 7, 2, "IPad Pro", true, 24000m, 9 },
+                    { 7, 3, "IPad Pro", true, 24000m, 9 },
                     { 8, 4, "LG Ultra TV", true, 43800m, 11 },
                     { 9, 4, "Philips 4K TV", true, 34000m, 9 },
                     { 11, 4, "Samsung Led TV", true, 35000m, 11 },

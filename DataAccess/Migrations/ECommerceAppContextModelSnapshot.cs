@@ -156,7 +156,7 @@ namespace DataAccess.Migrations
                         new
                         {
                             ProductId = 7,
-                            CategoryId = 2,
+                            CategoryId = 3,
                             ProductName = "IPad Pro",
                             Status = true,
                             UnitPrice = 24000m,

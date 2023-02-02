@@ -9,11 +9,13 @@ namespace MvcWebUI.ApiServices.Concrete
     {
         private readonly HttpClient _httpClient;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public CategoryApiManager(HttpClient httpClient, IHttpContextAccessor httpContextAccessor)
+        public IConfiguration Configuration { get; }
+        public CategoryApiManager(HttpClient httpClient, IHttpContextAccessor httpContextAccessor, IConfiguration configuration)
         {
+            Configuration = configuration;
             _httpClient = httpClient;
             _httpContextAccessor = httpContextAccessor;
-            _httpClient.BaseAddress = new Uri("https://localhost:44308/api/Categories/");
+            _httpClient.BaseAddress = new Uri($"{Configuration["BaseUrl"]}Categories/");
         }
 
         public async Task AddAsync(CategoryModel categoryModel)

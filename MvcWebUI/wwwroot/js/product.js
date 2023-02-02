@@ -8,7 +8,6 @@ function fun(id) {
     const url = "/getproductsbycategoryid/"
     $.get(`${url}${id}`, function (data) {
         $.each(data, function (index, value) {
-
             $("#products").append(`
                        <tr>
                            <td>${value.productId}</td>

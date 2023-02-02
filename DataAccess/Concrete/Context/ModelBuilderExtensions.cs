@@ -95,7 +95,7 @@ namespace DataAccess.Concrete.EntityFramework
                 ProductId = 7,
                 ProductName = "IPad Pro",
                 UnitPrice = 24000,
-                CategoryId = 2,
+                CategoryId = 3,
                 UnitsInStock = 9,
                 Status = true
 
