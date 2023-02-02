@@ -14,10 +14,15 @@ namespace MvcWebUI.Areas.Admin.Controllers
             _categoryApiService = categoryApiService;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> GetCategories()
         {
             var result = await _categoryApiService.GetAllAsync();
-            return View(result);
+            return Json(result);
         }
 
         [HttpGet]

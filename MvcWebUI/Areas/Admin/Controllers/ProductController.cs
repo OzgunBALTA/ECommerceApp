@@ -14,10 +14,15 @@ namespace MvcWebUI.Areas.Admin.Controllers
             _productApiService = productApiService;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> GetProducts()
         {
             var result = await _productApiService.GetAllAsync();
-            return View(result);
+            return Json(result);
         }
 
         [HttpGet]

@@ -1,5 +1,4 @@
-﻿@model IEnumerable<MvcWebUI.Models.CategoryModel>
-
+﻿
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
@@ -53,26 +52,7 @@
 
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach (var item in Model)
-                                {
-                                    <tr class="gradeX">
-                                        <td>@item.CategoryId</td>
-                                        <td>@item.CategoryName</td>
-                                        <td>
-                                            <a href="/Admin/Category/ChangeStatus/@item.CategoryId" class="btn btn-secondary" id="ChangeBtn"
-                                           onclick="return confirm('Blog durumunu değiştirmek istedğinize emin misiniz?');">
-                                                @(item.Status == true ? "Aktif" : "Pasif")
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a href="/Admin/Category/UpdateCategory/@item.CategoryId" class="btn btn-warning">Update</a>
-                                                <a href="/Admin/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Delete</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                }
+                            <tbody id="categories">
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -94,6 +74,7 @@
         <script src="~/Templates/ECommerceTemplate/js/plugins/footable/footable.all.min.js"></script>
         <script src="~/Templates/ECommerceTemplate/js/inspinia.js"></script>
         <script src="~/Templates/ECommerceTemplate/js/plugins/pace/pace.min.js"></script>
+        <script src="~/js/admin-category.js"></script>
         <script>
             $(document).ready(function () {
 

@@ -18,6 +18,7 @@ function fun(id) {
         });
     });
 }
+
 function getProducts() {
     var tbody = document.getElementById('products')
     tbody.innerHTML = "";
