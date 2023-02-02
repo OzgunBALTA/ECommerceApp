@@ -10,7 +10,7 @@ function getCategories() {
             $("#categories").append(`<tr class="gradeX">
                 <td>${value.categoryId}</td>
                 <td>${value.categoryName}</td>
-                <td> 
+                <td>
                      <a href="/Admin/Category/ChangeStatus/${value.categoryId}" class="btn btn-secondary" id="ChangeBtn"
                      onclick="return confirm('Kategori durumunu değiştirmek istedğinize emin misiniz?');">
                       ${value.status == true ? "Aktif" : "Pasif"}
