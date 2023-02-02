@@ -119,6 +119,15 @@ namespace DataAccess.Concrete.EntityFramework
 
             }, new Product
             {
+                ProductId = 10,
+                ProductName = "Samsung OLed TV",
+                UnitPrice = 32340,
+                CategoryId = 4,
+                UnitsInStock = 5,
+                Status = true
+
+            }, new Product
+            {
                 ProductId = 11,
                 ProductName = "Samsung Led TV",
                 UnitPrice = 35000,

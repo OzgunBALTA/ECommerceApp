@@ -182,6 +182,15 @@ namespace DataAccess.Migrations
                         },
                         new
                         {
+                            ProductId = 10,
+                            CategoryId = 4,
+                            ProductName = "Samsung OLed TV",
+                            Status = true,
+                            UnitPrice = 32340m,
+                            UnitsInStock = 5
+                        },
+                        new
+                        {
                             ProductId = 11,
                             CategoryId = 4,
                             ProductName = "Samsung Led TV",

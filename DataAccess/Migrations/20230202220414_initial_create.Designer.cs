@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ECommerceAppContext))]
-    [Migration("20230202195316_initial_create")]
+    [Migration("20230202220414_initial_create")]
     partial class initialcreate
     {
         /// <inheritdoc />
@@ -182,6 +182,15 @@ namespace DataAccess.Migrations
                             Status = true,
                             UnitPrice = 34000m,
                             UnitsInStock = 9
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            CategoryId = 4,
+                            ProductName = "Samsung OLed TV",
+                            Status = true,
+                            UnitPrice = 32340m,
+                            UnitsInStock = 5
                         },
                         new
                         {

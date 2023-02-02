@@ -74,6 +74,7 @@ namespace DataAccess.Migrations
                     { 7, 3, "IPad Pro", true, 24000m, 9 },
                     { 8, 4, "LG Ultra TV", true, 43800m, 11 },
                     { 9, 4, "Philips 4K TV", true, 34000m, 9 },
+                    { 10, 4, "Samsung OLed TV", true, 32340m, 5 },
                     { 11, 4, "Samsung Led TV", true, 35000m, 11 },
                     { 12, 4, "Arçelik HD TV", true, 23800m, 11 },
                     { 13, 4, "Beko HD TV", true, 32200m, 9 },
